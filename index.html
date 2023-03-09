@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MarkupIII</title>
+
+    <style>
+      body {
+        border: solid;
+        border-color: gray;
+        border-radius: 10px;
+        padding: 16px;
+      }
+      header {
+        margin-bottom: 50px;
+      }
+
+      .headerStyle {
+        display: flex;
+        flex-flow: row nowrap;
+        height: auto;
+        width: auto;
+        padding: 15px;
+        margin: 15px;
+      }
+      .containerHeader {
+        display: flex;
+        flex-flow: row nowrap;
+        height: auto;
+        width: 100%;
+        align-items: center;
+        place-items: center;
+        justify-content: center;
+        flex-direction: row;
+      }
+
+      .colums {
+        align-items: center;
+        place-items: center;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        grid-template-rows: 100%;
+      }
+
+      .Step {
+        display: grid;
+        width: 100%;
+        place-items: center;
+        align-items: center;
+        grid-template-columns: repeat(4, 25%);
+        grid-template-rows: 100%;
+      }
+
+      .letras {
+        font-weight: bold;
+        color: cadetblue;
+        margin: 0;
+        padding: 0;
+      }
+
+      .letrasM {
+        font-weight: bold;
+        color: rgb(142, 76, 218);
+        margin: 0;
+        padding: 0;
+      }
+      .letrasB {
+        font-weight: bold;
+        color: gray;
+        margin: 0;
+        padding: 0;
+      }
+
+      .circulo_verde {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 69%;
+        border: solid;
+        border-color: cadetblue;
+        background-color: cadetblue;
+        border-radius: 100%;
+        margin-right: 20px;
+        color: white;
+        display: flex;
+      }
+      .circulo_morado {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 69%;
+        border: solid;
+        border-color: rgb(142, 76, 218);
+        background-color: rgb(142, 76, 218);
+        border-radius: 100%;
+        margin-right: 20px;
+        color: white;
+        display: flex;
+      }
+      .circulo_blanco {
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 69%;
+        border: solid;
+        border-color: lightgray;
+        background-color: white;
+        border-radius: 100%;
+        margin-right: 20px;
+        color: rgb(142, 76, 218);
+        display: flex;
+      }
+
+      .linea1 {
+        width: 100%;
+        text-align: center;
+        margin-left: 2%;
+        border: solid;
+        border-style: dotted;
+        border-width: 1px;
+        border-color: cadetblue;
+        background-color: cadetblue;
+        border-radius: 100%;
+        margin-right: 20px;
+        color: white;
+        display: flex;
+      }
+
+      .lineaB {
+        width: 100%;
+        text-align: center;
+        margin-left: 2%;
+        margin-right: 20px;
+        color: gray;
+        font-weight: bold;
+        display: flex;
+      }
+      main {
+        margin-bottom: 50px;
+      }
+      .anuncio {
+        margin-bottom: 50px;
+      }
+      .anuncio h2 {
+        color: rgb(109, 101, 101);
+      }
+      .anuncio p {
+        color: gray;
+        padding: 0%;
+        margin: 0%;
+      }
+      .containerMain {
+        display: grid;
+        width: 100%;
+        place-items: center;
+        align-items: center;
+        grid-template-columns: 80% 20%;
+        grid-template-rows: repeat(3, 33%);
+        grid-template-areas:
+          "izquierdo derecho"
+          "izquierdo derecho"
+          "izquierdo derecho";
+      }
+      .izquierdo {
+        display: flex;
+        justify-content: flex-start;
+        justify-self: left;
+        box-sizing: content-box;
+        flex-direction: column;
+        padding: 0%;
+        margin-bottom: 20px;
+        width: 90%;
+      }
+      .derecho {
+        display: flex;
+        justify-content: flex-start;
+        justify-self: left;
+        box-sizing: content-box;
+        flex-direction: column;
+        padding: 0%;
+        margin-bottom: 20px;
+        width: 100%;
+      }
+      .arriba {
+        font-weight: bold;
+        color: gray;
+        padding: 0%;
+        margin-bottom: 10px;
+      }
+
+      .cuadro1 {
+        border: solid;
+        border-color: lightgray;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 0%;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        align-items: center;
+      }
+
+      .cuadrado {
+        padding: 10px;
+        margin: 0%;
+      }
+
+      .flechas {
+        width: 40px;
+        writing-mode: vertical-lr;
+        display: flex;
+        justify-content: flex-end;
+        justify-self: self-end;
+        color: lightgray;
+        font-weight: bold;
+      }
+
+      footer {
+        display: grid;
+        grid-template-columns: 90% 10%;
+        grid-template-rows: 50% 50%;
+        grid-template-areas:
+          "input1 vacia"
+          "back1 continue";
+      }
+      .input1 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .vacia{
+        margin-bottom: 10px;
+      }
+
+      .cuadroM {
+        padding: 5px;
+        border-radius: 8px;
+        background-color: rgb(142, 76, 218);
+        color: white;
+        margin-right: 10px;
+        border-radius: 10px;
+        padding: 5px;
+        text-align: center;
+        width: 20px;
+      }
+      .back1 {
+        border: solid;
+        border-color: lightgray;
+        border-radius: 10px;
+        align-self: center;
+        text-align: center;
+        color: gray;
+        width: 100px;
+      }
+
+      .continue {
+        border: solid;
+        border-color: rgb(142, 76, 218);
+        background-color: rgb(142, 76, 218);
+        color: white;
+        border-radius: 10px;
+        align-self: center;
+        text-align: center;
+        width: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header clas="headerStyle">
+      <section class="containerHeader">
+        <section class="Step">
+          <section class="colums">
+            <label class="circulo_verde">1</label>
+            <p class="letras">Cabin</p>
+            <label class="linea1"></label>
+          </section>
+          <section class="colums">
+            <label class="circulo_morado">2</label>
+            <p class="letrasM">Meals</p>
+            <label class="lineaB">- - - - - </label>
+          </section>
+          <section class="colums">
+            <label class="circulo_blanco">3</label>
+            <p class="letrasB">Upgrades</p>
+            <label class="lineaB">- - - - - </label>
+          </section>
+          <section class="colums">
+            <label class="circulo_blanco">4</label>
+            <p class="letrasB">Payment</p>
+          </section>
+        </section>
+      </section>
+    </header>
+
+    <main>
+      <section class="anuncio">
+        <h2>Meal Preferences</h2>
+        <p>
+          Your flight comes with breakfast, luch, and dinner.Please make your
+          selections below.
+        </p>
+        <p>Changes to your order can be made up 48 hours before your flight.</p>
+      </section>
+
+      <section class="containerMain">
+        <section class="izquierdo">
+          <label class="arriba">Breakfast:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+        <section class="derecho">
+          <label class="arriba">Drink:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+        <section class="izquierdo">
+          <label class="arriba">Lunch:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+        <section class="derecho">
+          <label class="arriba">Drink:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+        <section class="izquierdo">
+          <label class="arriba">Dinner:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+        <section class="derecho">
+          <label class="arriba">Drink:</label>
+          <section class="cuadro1">
+            <label class="cuadrado">Sausage egg Scranble Bowl </label>
+            <label class="flechas">< ></label>
+          </section>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <section class="input1">
+        <label for="cuadroM" class="cuadroM">✔ </label>
+        <p class="letrasB">I'd like dessert,too!</p>
+      </section>
+      <section class="vacia"></section>
+      <section class="back1">
+        <p>Back</p>
+      </section>
+      <section class="continue">
+        <p>Continue</p>
+      </section>
+    </footer>
+  </body>
+</html>
